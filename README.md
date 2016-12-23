@@ -15,7 +15,7 @@ As a bonus, the HTTP GET request to send a RF code, thereby turning the switch o
 ### Usage
 
 1. `WebsocketRC.ino` is flashed onto ESP8266. I am using [this] NodeMCU v1.0.
-2. `esp8266_rcSwitch.groovy` is the custom device handler on Smartthings.
+2. `esp8266_rcSwitch.groovy` is the custom device handler on Smartthings. Once installed, add a new device from dev web UI and select `ESP8266 - RCSwitch` as the device handler type. Complete setup of device on your phone.
 3. `http://<esp_ip_address>/learn` to sniff RF codes
 4. `http://<esp_ip_address>/switch?code=<code>` to manually send a RF code
 
