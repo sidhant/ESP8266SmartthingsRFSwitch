@@ -2,7 +2,7 @@
 I put this quick and dirty proof of concept together to familiarize myself with the ESP8266 platform and add it to my arsenal of embedded tools.
 
 ### Overview
-ESP runs a websocket server and a webserver. The webserver exposes a terse API that takes one GET parameter, the RF code and emits that using 433 MHz modules (I used [these]). To learn/sniff the codes, you can visit `http://esp8266rc/learn` that makes use of a simple HTML page + Websockets (hence the websockets server) to in real-time display sniffed codes. 
+ESP runs a websocket server and a webserver. The webserver exposes a terse API that takes one GET parameter, the RF code and emits that using 433 MHz modules (I used [these]). To learn/sniff the codes, you can visit `http://esp8266rc/learn` that makes use of a minimal HTML page + Websockets (hence the websockets server) to in real-time display (woot!) sniffed codes. 
 
 As a bonus, the HTTP GET request to send a RF code, thereby turning the switch on/off can be done from the Smartthings hub. This means, I have cetral control of these cheap RF switches and can make them part of my routines, automations and other scripts.
 
