@@ -1,8 +1,8 @@
 # ESP8266 + Websockets + Webserver + RC-Switch 433 Mhz + SmartThings
-I put this quick and dirty prrof of concept together to familiarize myself with the ESP8266 platform and add it to my arsenal of embedded tools.
+I put this quick and dirty proof of concept together to familiarize myself with the ESP8266 platform and add it to my arsenal of embedded tools.
 
 ### Overview
-ESP runs a websocket server and a webserver. The webserver exposes a terse API that takes one GET parameter, the RF code and emits that using 433 MHz modules (I used [these]). To learn/sniff the codes, you can visit http://esp8266rc/learn that makes use of a simple HTML page + Websockets (hence the websockets server) to in real-time display sniffed codes. 
+ESP runs a websocket server and a webserver. The webserver exposes a terse API that takes one GET parameter, the RF code and emits that using 433 MHz modules (I used [these]). To learn/sniff the codes, you can visit `http://esp8266rc/learn` that makes use of a simple HTML page + Websockets (hence the websockets server) to in real-time display sniffed codes. 
 
 As a bonus, the HTTP GET request to send a RF code, thereby turning the switch on/off can be done from the Smartthings hub. This means, I have cetral control of these cheap RF switches and can make them part of my routines, automations and other scripts.
 
@@ -19,7 +19,7 @@ As a bonus, the HTTP GET request to send a RF code, thereby turning the switch o
 2. `esp8266_rcSwitch.groovy` is the custom device handler on Smartthings. Once installed, add a new device from dev web UI and select `ESP8266 - RCSwitch` as the device handler type. Complete setup of device on your phone.
 3. `http://<esp_ip_address>/learn` to sniff RF codes
 4. `http://<esp_ip_address>/switch?code=<code>` to manually send a RF code
-5. `websocketClient.html` is minified and copied as a String variable in `WebsocketRC.ino`. This static page is served when one visit the RF learning page.
+5. `websocketClient.html` is minified and copied as a String variable in `WebsocketRC.ino`. This static page is served when one visits the RF learning page.
 
 ### Pin Mapping
 ```
